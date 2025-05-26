@@ -11,10 +11,10 @@ import datetime
 
 def test_completed(start_date, end_date, status_to_change, expected_status):
     sfrm = SuperFrogRequestManager()
-    req = sfrm.save_request("superfrog_A", start_date, end_date)
+    req = sfrm.save_request("superfrog_X", start_date, end_date)
     sfrm.change_request_status(req, status_to_change)
 
-    req1 = sfrm.save_request("superfrog_B", "05-05-25", "27-05-25")
+    req1 = sfrm.save_request("superfrog_Y", "05-05-25", "27-05-25")
 
     filtered_requests = sfrm.filter_requests("Completed", "01-05-25", "31-05-25")
 
@@ -33,7 +33,7 @@ def teste_honorarium_system():
 
     req1 = sfrm.save_request("user_X", "01-01-25", "05-01-25")
     req2 = sfrm.save_request("user_Y", "10-01-25", "15-01-25")
-    req3 = sfrm.save_request("userC", "20-01-25", "25-01-25")
+    req3 = sfrm.save_request("user_Z", "20-01-25", "25-01-25")
 
     sfrm.change_request_status(req1, "Completed")
     sfrm.change_request_status(req3, "Completed")

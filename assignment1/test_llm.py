@@ -33,10 +33,10 @@ def setup_systems():
     request_manager = SuperFrogRequestManager()
     honorarium_system = HonorariumRequestService()
 
-    req1_payload = request_manager.save_request("superfrog_A", "01-05-25", "01-05-25")
-    req2_payload = request_manager.save_request("superfrog_B", "05-05-25", "05-05-25")
-    req3_payload = request_manager.save_request("superfrog_A", "10-05-25", "10-05-25")
-    request_manager.save_request("superfrog_C", "12-05-25", "12-05-25")
+    req1_payload = request_manager.save_request("superfrog_X", "01-05-25", "01-05-25")
+    req2_payload = request_manager.save_request("superfrog_Y", "05-05-25", "05-05-25")
+    req3_payload = request_manager.save_request("superfrog_X", "10-05-25", "10-05-25")
+    request_manager.save_request("superfrog_Z", "12-05-25", "12-05-25")
 
     request_manager.change_request_status(req1_payload, "Completed")
     request_manager.change_request_status(req2_payload, "Completed")
